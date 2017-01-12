@@ -20,13 +20,13 @@ echo "Configuring...";
 
 if [ -e $CONF_FILE ] # Controlling is conf file exits?
 then
-  cat > $CONF_FILE <<EOL
+  cat > $CONF_FILE <<EOF
 <VirtualHost *:80>
     ServerName $DOMAIN
     ServerAlias www.$DOMAIN
     DocumentRoot /var/www/$DOMAIN
 </VirtualHost>
-EOL
+EOF
 fi
 
 echo "Apache Service is reloading..."
